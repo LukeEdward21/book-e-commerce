@@ -1,18 +1,19 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import Head from 'next/head'
-import Link from 'next/link'
 import {Jumbotron, Container} from 'reactstrap'
 import Menu from '../components/Menu'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-function Home(books) {
+function Search(books) {
+  const router = useRouter()
+  console.log(books.response)
   return (
     
-    <div className="homepage">  
+    <div className="searchpage">  
       <Head>
-        <title>Book city - Home</title>
-        <meta name="description" content="Loja de livros" />
-        <meta name="author" content="noobmaster69" />
+        <title>Book city - Busca</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />
@@ -25,8 +26,9 @@ function Home(books) {
       </Jumbotron>
 
       <Container className="text-center">
-        <div className="row">
-          {books.response.map((book) => (
+      <div className="row">
+          {
+          books.response.map((book) => (
             <div className="col-lg-4" key={book._id}>
               <div className="cape_container">
                 <img src={book.image} className="cape-card"/>
@@ -52,16 +54,24 @@ function Home(books) {
                   </Link>
                 </p>
             </div>
-          ))}
-        </div>        
+          ))
+          }
+        </div>      
       </Container>  
     </div>
   )
 }
 
-Home.getInitialProps = async() => {
-  var res =  await axios.get("http://localhost:8000/book-list")
+Search.getInitialProps = async({query}) => {
+  const {book} = query
+  var res = await axios({
+    method: "POST",
+    url: "http://localhost:8000/search-book",
+    data: {
+      name: book  
+    }
+  })
   return {response: res.data}
 }
   
-export default Home
+export default Search

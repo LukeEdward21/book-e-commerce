@@ -1,0 +1,21 @@
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-search {
+    background-color: #0099aa !important;
+}
+
+.mr-auto {
+    width: 100%;
+    margin: auto;
+}
+
+.form-search {
+    width: 90%;
+}
+
+.mr-sm-2 {
+    width: 89% !important;
+}

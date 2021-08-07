@@ -1,0 +1,43 @@
+.section-book {
+    background-color: #bbbbbb;
+}
+
+.book-datas {
+    border: 1px black solid;
+    background-color: #fff;
+}
+
+.book-image, .book-buy {
+    width: 50%;
+}
+
+.book-image {
+    float: left;
+    height: 458px;
+}
+.book-buy {
+    float: right;
+    text-align: justify;
+    height: 458px;
+}
+
+.book-buy-panel {
+    margin-top: 65%;
+    margin-left: 10%;
+}
+
+.btn-info {
+    margin-left: 1%;
+}
+
+.btn-success {
+    margin-top: 1%;
+}
+
+.book-buy {
+    margin-bottom: 5%;
+}
+
+.book-datas .book-buy, .book-image {
+    display: inline;
+}

@@ -1,0 +1,35 @@
+.services.jumbotron.jumbotron-fluid {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /*background-image: url('https://s2.glbimg.com/nIqfLY3zjr8JntK_zMS9QxXFaZk=/e.glbimg.com/og/ed/f/original/2020/09/05/alfons-morales-ylswjsy7stw-unsplash.jpg');*/
+    background-image: url('../public/janko-ferlic-sfL_QOnmy00-unsplash.jpg');
+    color: white;
+}
+
+.cape_container {
+    position: relative;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+.cape-card {
+    height: 400px;
+    width: 244px;   
+}
+
+.title_container {
+    margin-top: 15px;
+    height: 85px;
+}
+
+.title_container p {
+    text-align: center;
+}
+
+.synopsis_container {
+    height: 180px;
+}
+
+.synopsis_container p {
+    text-align: justify;
+}
