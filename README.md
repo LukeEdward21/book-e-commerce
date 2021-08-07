@@ -2,5 +2,5 @@
 https://github.com/LukeEdward21/library-api
 
 ## Um simples front-end de um e-commerce de livros
-npm install
+npm install and 
 npm run dev
